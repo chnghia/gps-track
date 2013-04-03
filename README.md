@@ -5,6 +5,30 @@ GPS Tracking
 
 # Installation
 
+Cài đặt trên Windows
+
+1.Sử dụng [XAMPP](http://www.apachefriends.org/en/xampp.html)
+
+2.Dùng Git để clone project
+    
+    cd /path/to/xampp/htdocs/
+    git clone https://github.com/chnghia/gps-track.git
+
+3.Thiết lập vhosts cho gps-track
+
+    <VirtualHost *:80>
+      ServerAdmin master@gps-track.mycloud.me
+      DocumentRoot "/path/to/xampp/htdocs/gps-track"
+      ServerName gps-track.mycloud.me
+      ServerAlias gps-track.mycloud.me
+      ErrorLog "logs/gps-track.mycloud-error.log"
+      CustomLog "logs/gps-track.mycloud-access.log" combined
+    </VirtualHost>
+
+4.Chỉnh sửa hosts file
+
+    127.0.0.1            gps-track.mycloud.me
+
 # License
 (The MIT License)
 
