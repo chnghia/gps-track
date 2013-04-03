@@ -22,8 +22,8 @@ class GPS_Controller extends Controller
 	var $logged = false;
 	
 	const DEMO_USER_ID = 2;
-	const LAT_DEFAULT = 10.79883;
-	const LNG_DEFAULT = 106.65999;
+	const LAT_DEFAULT = 10.774037;
+	const LNG_DEFAULT = 106.703339;
 	const ZOOM_DEFAULT = 14;
 	const TIME_DEFFAULT = 30;
 

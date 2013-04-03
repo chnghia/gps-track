@@ -50,14 +50,14 @@ class Maps extends GPS_Controller {
 		$path = $this->gps_trunk->get_path_of_imei($imei, $from_date, $to_date);
 		$distance = 0;
 		$tmp = null;
-		foreach ($path as &$row) {
-			if ($tmp) {
-				$distance += distance($tmp['lat'], $tmp['lng'], $row['lat'], $row['lng']);
-			}
-			$row['distance'] = round($distance, 4);
-			$row['raw_data'] = rawdata_refine_array($row['raw_data']);
-			$tmp = $row;
-		}
+		//foreach ($path as &$row) {
+		//	if ($tmp) {
+		//		$distance += distance($tmp['lat'], $tmp['lng'], $row['lat'], $row['lng']);
+		//	}
+		//	$row['distance'] = round($distance, 4);
+		//	$row['raw_data'] = rawdata_refine_array($row['raw_data']);
+		//	$tmp = $row;
+		//}
 		
 		$json['path'] = $path;
 		echo json_encode($json);
